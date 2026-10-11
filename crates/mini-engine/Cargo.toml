@@ -1,0 +1,17 @@
+[package]
+name = "mini-engine"
+description = "Desktop facade for mini-core: minifb window, PNG assets, cpal audio, file persistence"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+mini-core = { workspace = true }
+minifb = { workspace = true }
+cpal = { workspace = true, optional = true }
+png = { workspace = true, optional = true }
+
+[features]
+audio = ["dep:cpal"]
+png = ["dep:png"]

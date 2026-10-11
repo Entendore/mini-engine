@@ -1,0 +1,15 @@
+[workspace]
+resolver = "2"
+members = ["crates/mini-core", "crates/mini-engine"]
+
+[workspace.package]
+version = "0.5.0"
+edition = "2021"
+rust-version = "1.75"
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+mini-core = { path = "crates/mini-core" }
+minifb = "0.27"
+cpal = { version = "0.15", optional = true }
+png = { version = "0.17", optional = true }
